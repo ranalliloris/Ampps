@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ricerca vino e annata</title>
+</head>
+<body>
+	<h1>Ricerca vino per tipo e annata</h1>
+	<form action="./tipo-annata.php" method="POST">
+		<label>Tipo Vino</label>
+		<select name="tipo">
+			<option value="Rosso">Rosso</option>
+			<option value="Bianco">Bianco</option>
+		</select>
+		<br><br>
+		<label>Annata: </label>
+		<input type="number" name="annata" min="1950" max="2019" step="1">
+		<br><br>
+		<input type="submit" value="cerca">
+
+
+	</form>
+
+</body>
+</html>

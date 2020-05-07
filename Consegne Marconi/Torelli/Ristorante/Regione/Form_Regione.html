@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ricerca Vini per Regione</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Ricerca vino per regione</h1>
+    <form action="./Query_Regione.php" method="POST">
+        <label> Regione: </label>
+        
+        <select name="Regione">
+            <option value="Piemonte"> Piemonte </option>
+            <option value="Campania"> Campania </option>
+            <option value="Lombardia"> Lombardia </option>
+            <option value="Trentino Alto Adige"> Trentino Alto Adige </option>
+            <option value="Sicilia"> Sicilia </option>
+            <option value="Friuli Venezia Giulia"> Friuli Venezia Giulia </option>
+            <option value="Abruzzo"> Abruzzo </option>
+            <option value="Emilia Romagna"> Emilia Romagna </option>
+            <option value="Toscana"> Toscana </option>
+            <option value="Veneto"> Veneto </option>
+
+        </select>
+
+        <input type="submit" value="Cerca">
+    </form>
+</body>
+</html>

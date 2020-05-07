@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca vino per tipo e annata</title>
+    <link href="../CSS/Style.css" rel="stylesheet">
+	<style>
+h1{color: black;
+  background-color:gold;
+  font-family: verdana;
+  font-size: 300%;
+  border-style:groove ;
+}
+body {text-align: center;
+background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTZNMVTmqYw9LykauwVxedIN35tc-Ke1_oVdk321tyc5krTkKzN&usqp=CAU');
+}
+input{color: black;
+  background-color:gold;
+  font-family: timesnewroman;
+  font-size: 300%;
+  border-style:groove ;
+}
+label{color: black;
+  background-color:gold;
+  font-family: timesnewroman;
+  font-size: 300%;
+  border-style:groove ;
+}
+select{color: black;
+  background-color:gold;
+  font-family: timesnewroman;
+  font-size: 300%;
+  border-style:groove ;
+}
+
+</style>
+</head>
+
+<body>
+    <h1>RICERCA VINO PER TIPO E ANNATA</h1>
+    <form action="tipo-annata.php" method="POST">
+        <label>Tipo vino</label>
+        <select name="tipo">
+            <option value="Rosso">Rosso</option>
+            <option value="Bianco">Bianco</option>
+        </select>
+        <br><br>
+        
+        <label>Annata</label>
+        <input name="annata" type="number" min="1950" max="2019" step="1">
+        <br><br>
+
+        <input type="submit" value="Cerca">
+	<br></br>
+    </form>
+	<form action="../Homepage/homepage.html">
+        <input type="submit" value="Indietro" />
+    </form>
+</body>
+</html>

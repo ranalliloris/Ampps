@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ricerca per tipo e provincia</title>
+  </head>
+  <body>
+    <h1>Ricerca vino per tipo e provincia</h1>
+    <form action="./tipo-provincia.php" method="POST">
+      <label>Tipo vino:</label>
+      <input type="radio" name="tipo" value="bianco"><label>bianco</label>
+      <input type="radio" name="tipo" value="rosso"><label>rosso</label>
+      <br><br>
+      <label>Scegli quale provincia tra quelli disponibili: </label>
+      <select name="provinciaScelta">
+        <option value="Asti">Asti</option>
+        <option value="Avellino">Avellino</option>
+        <option value="Bolzano">Bolzano</option>
+        <option value="Brescia">Brescia</option>
+        <option value="Catania">Catania</option>
+        <option value="Cuneo">Cuneo</option>
+        <option value="Gorizia">Gorizia</option>
+        <option value="Pescara">Pescara</option>
+        <option value="Ravenna">Ravenna</option>
+        <option value="Siena">Siena</option>
+        <option value="Verona">Verona</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Cerca">
+    </form>
+  </body>
+</html>

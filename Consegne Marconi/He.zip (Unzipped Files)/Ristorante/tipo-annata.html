@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        #tuodiv {
+width: 100%; height: 100%; top: 0; left: 0;
+background: url(vino2.jpg) no-repeat center top; position: fixed; z-index: -1;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+    </style>
+    <title>Ricerca vino per tipo e annata</title>
+</head>
+<body>
+    <div id="tuodiv"></div>
+    <center>
+    <h1><font face=”Times New Roman, Times, serif” color="#FAFAD2" size="6">Ricerca vino per tipo e annata</font></h1>
+    <form action="./tipo-annata.php" method="POST">
+    <br><br>
+    <label><font face=”Times New Roman, Times, serif” color="#FAFAD2" size="4">Tipo vino </font></label>
+    <select name="tipo">
+        <option value="Rosso">Rosso</option>
+        <option value="Bianco">Bianco</option>
+    </select>
+    <br><br>
+    <label><font face=”Times New Roman, Times, serif” color="#FAFAD2" size="4">Annata </font></label>
+    <input type="number" name="annata" min="1950" max="2020" step="1">
+    <br><br>
+    <button class="btn btn-outline-secondary" type="submit">CERCA</button>
+    </form>
+</center>
+<style>
+    footer 
+    {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    }
+</style>
+<footer>
+    Torna alla <a href="homepage.html">homepage</a> 
+    <br><br>
+</footer>
+</body>
+
+</html>

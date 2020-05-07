@@ -1,0 +1,16 @@
+#tuodiv {
+width: 100%; height: 100%; top: 0; left: 0;
+background: url(vino.jpg) no-repeat center top; position: fixed; z-index: -1;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.thumb {
+  width: 412px;
+  height: 206px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Ricerca vino per tipo e annata</title>
+</head>
+<body class="bg-light" background="https://cdn.pixabay.com/photo/2014/04/21/21/15/botti-329375_960_720.jpg" style="background-size:cover;">
+    <div align="center">
+        <br><br>
+        <h1 class="text-light">Ricerca vino per tipo e annata</h1>
+        <br> <br> <br> <br> 
+        <form action="tipoAnnata.php" method="POST">
+            <div class="input-group mb-3" style="width: 10%;">
+                <label class="input-group-text" for="inputGroupSelect01">tipo Vino</label>
+                <select name ="tipo" class="custom-select custom-select-lg"  id="inputGroupSelect01">
+                    <option value="Rosso">Rosso</option>
+                    <option value="Bianco">Bianco</option>
+                </select>
+            <br>
+        </div>
+        <div class="input-group mb-3" style="width: 10%;">
+            <label class="input-group-text " for="inputGroupSelect02" >Annata: </label>
+            <input name= "annata" type="number" min="1950" max="2019" step ="1" class="form-control-lg" >
+        </div>
+        <button  type="submit" formaction="../index.html" class="btn btn-outline-light" >Home page</button> 
+        <input type="submit" value= "Cerca"  class="btn btn-outline-light">
+      
+        </form>
+    </div>
+</body>
+</html>

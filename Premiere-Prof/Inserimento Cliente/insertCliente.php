@@ -16,7 +16,6 @@
                 echo 'Connessione non riuscita\n'.$e;
                 die();
             }
-            
             try
             {
                 /*** Preparo la query da eseguire ***/
@@ -47,7 +46,6 @@
             {
                 echo "DB Error: ".$e->getMessage();
                 die();
-            }
-        ?>
+            }?>
     </body>
 </html>

@@ -45,7 +45,7 @@
             {
                 echo "Errore nell'esecuzione della query: ";
                 print_r($stmt->errorInfo());
-                die();
+                return null;
             }
             return $stmt->fetchAll();
         }
@@ -55,8 +55,6 @@
             $query='
                     INSERT INTO '.$table.' VALUES(';
             
-           
-
             foreach($values as $key=>$val)
             {
                 $query.=''.$key.',';
@@ -64,7 +62,38 @@
             $query=rtrim($query,',');
             $query.=')';
             return $this->query($query,$values);
-        }    
+        }
+        
+        public function delete($table, $condition)
+        {
+            $query='DELETE FROM '.$table.' WHERE';
+            foreach($condition as $key=>$value)
+            {
+                $query.=' '.ltrim($key,':').'='.$key.' AND';
+            }
+            $query=rtrim($query,'AND');
+            $esito=$this->query($query,$condition);
+            return esito;
+            
+        }
+
+        public function update($table, $newVal,$condition)
+        {
+            $query='UPDATE '.$table.' SET';
+            foreach($newVal as $key=>$value)
+            {
+                $query.=' '.ltrim($key,':').'='.$key.',';
+            }
+            $query=rtrim($query,',');
+            $query.=' WHERE';
+            foreach($condition as $key=>$value)
+            {
+                $query.=' '.ltrim($key,':').'='.$key.' AND';
+            }
+            $query=rtrim($query,'AND');
+            $esito=$this->query($query,$condition);
+            return esito;
+        }
 
         public function __destruct()
         {

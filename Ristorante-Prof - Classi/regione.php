@@ -26,6 +26,11 @@
         $dbconn->connect();
         try
         {
+            $condition=[
+                            ':id'=> '1',
+                            ':nomeVino' => 'Brunello di Montalcino'
+                        ];
+            $dbconn->delete('vino',$condition);
             
             $query="SELECT nomeVino, tipoVino, nome, cantina.provincia
                     FROM vino INNER JOIN cantina 

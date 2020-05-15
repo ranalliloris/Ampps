@@ -50,7 +50,7 @@
             return $stmt;
         }
 
-        public function insert($values,$table)
+        /*public function insert($values,$table)
         {
             $query='
                     INSERT INTO '.$table.' VALUES(';
@@ -62,7 +62,31 @@
             $query=rtrim($query,',');
             $query.=')';
             return $this->query($query,$values);
+        }*/
+        public function insert($table, $values)
+        {
+            $query='INSERT INTO '.$table.'(';
+            foreach($values as $key=>$value)
+            {
+                $query.=' '.ltrim($key,':').','; //ltrim($str,':'); leftTrim (toglie il carattere a sinistra di str)
+                                                //rtrim($str,':'); rightTrim (toglie il carattere a destra di str)
+            }
+            //INSERT INTO (sigla,provincia,regione,
+            $query=rtrim($query,',').') VALUES('; 
+            
+            //INSERT INTO (sigla,provincia,regione) VALUES(
+            
+            foreach($values as $key=>$value)
+            {
+                $query.=$key.',';
+            }
+            //INSERT INTO (sigla,provincia,regione) VALUES(:sigla,:provincia,:regione,
+            $query=rtrim($query,',').')';
+            echo $query;
+            $stmt=$this->query($query,$values);
+            return $stmt;
         }
+
 
         public function userExists($username)
         {
@@ -95,7 +119,7 @@
                             ":citta" => $post["citta"],
                             ":provincia" => $post["provincia"]
             ];
-            return $this->insert($values,'utente');
+            return $this->insert('utente',$values);
         }
         
         public function delete($table, $condition)

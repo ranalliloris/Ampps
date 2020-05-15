@@ -32,8 +32,10 @@ class dbConnect
         }
         return $this->db;
     }
-    public function query($query,$parameters)
+
+    public function query($query,$parameters=[])
     {
+        
         //$stmt=$db->prepare($query);
         $stmt=$this->db->prepare($query); //$db == $this->db
 
@@ -44,6 +46,42 @@ class dbConnect
             }
         return $stmt;
     }
+
+    /*
+    $query='INSERT INTO province (sigla,provincia,regione)
+            VALUES(:sigla,:provincia,:regione)';
+
+            $parameters=[
+            ':sigla'=>$_POST["sigla"],
+            ':provincia'=>$_POST["provincia"],
+            ':regione'=>$_POST["regione"]
+             ];
+
+            */
+    public function insert($table, $values)
+    {
+        $query='INSERT INTO '.$table.'(';
+        foreach($values as $key=>$value)
+        {
+            $query.=' '.ltrim($key,':').','; //ltrim($str,':'); leftTrim (toglie il carattere a sinistra di str)
+                                            //rtrim($str,':'); rightTrim (toglie il carattere a destra di str)
+        }
+        //INSERT INTO (sigla,provincia,regione,
+        $query=rtrim($query,',').') VALUES('; 
+        
+        //INSERT INTO (sigla,provincia,regione) VALUES(
+        
+        foreach($values as $key=>$value)
+        {
+            $query.=$key.',';
+        }
+        //INSERT INTO (sigla,provincia,regione) VALUES(:sigla,:provincia,:regione,
+        $query=rtrim($query,',').')';
+        echo $query;
+        $stmt=$this->query($query,$values);
+        return $stmt;
+    }
+
     
 
 }

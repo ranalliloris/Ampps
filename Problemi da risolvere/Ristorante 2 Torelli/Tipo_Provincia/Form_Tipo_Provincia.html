@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ricerca Vini per tipo e provincia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Ricerca vino per tipo e provincia</h1>
+    <form action="./Query_Tipo_Provincia.php" method="POST">
+        <label> Regione: </label>
+        
+        <select name="Tipo">
+            <option value="Rosso"> Vino Rosso </option>
+            <option value="Bianco"> Vino Bianco </option>
+        </select>   
+
+        <br><br>
+
+        <select name="Provincia">
+            <option value="AT"> AT </option>
+            <option value="AV"> AV </option>
+            <option value="BS"> BS </option>
+            <option value="BZ"> BZ </option>
+            <option value="CN"> CN </option>
+            <option value="CT"> CT </option>
+            <option value="GO"> GO </option>
+            <option value="PE"> PE </option>
+            <option value="RA"> RA </option>
+            <option value="SI"> SI </option>
+            <option value="VR"> VR </option>
+            
+        </select>
+        
+        <br><br>
+        <input type="submit" value="Cerca"> 
+    </form>
+</body>
+</html>

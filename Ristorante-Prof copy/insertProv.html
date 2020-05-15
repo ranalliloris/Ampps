@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserimento di una nuova Provincia</title>
+</head>
+<body>
+    <h1>Inserimento di una nuova provincia</h1>
+    <form action="insertProv.php" method="POST">
+        <label>Sigla</label>
+        <input type="text" maxlength="2" name="sigla">
+        <br><br>
+        <label>Provincia</label>
+        <input type="text" name="provincia">
+        <br><br>
+        <label>Regione</label>
+        <input type="text" name="regione">
+        <br><br>
+        <input type="submit" value="Inserisci">
+        <input type="reset" value="Cancella">
+    </form>
+</body>
+</html>

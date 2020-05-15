@@ -27,7 +27,8 @@
             $query="SELECT DISTINCT sigla
                     FROM province";
             
-            $rows=$dbconn->query($query);
+            $stmt=$dbconn->query($query);
+            $rows=$stmt->fetchAll();
             foreach($rows as $row)
             {
                 echo "<option value='".$row["sigla"]."'>".$row["sigla"]."</option>";

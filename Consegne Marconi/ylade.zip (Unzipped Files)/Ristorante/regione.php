@@ -20,7 +20,7 @@
       <tbody>
     <?php
     try{
-          $db=new PDO("mysql:host=localhost; dbname=RistoranteMarconi", "patpat", "patpat2690");
+          $db=new PDO("mysql:host=localhost; dbname=RistoranteMarconi", "userdb", "userdb");
           //echo "Connessione stabilita";
       }catch(PDOException $e){
           echo "Errore nella connessione al DB: ".$e;

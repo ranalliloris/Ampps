@@ -34,7 +34,8 @@
                             ":tipo"=>$_GET["tipo"],
                             ":annata"=>$_GET["annata"] 
                         ];
-            $rows=$dbconn->query($query,$parameters);
+            $stmt=$dbconn->query($query,$parameters);
+            $rows=$stmt->fetchAll();
             if($rows==null)
             {
                 echo "<tr>
@@ -54,7 +55,7 @@
         }
         catch(Exceptio $e)
         {
-            echo "Errore nell'esecuzione della query: ".$e;
+            echo "Errore nell'esecuzione della query: ".$e->getTrace();
             die();
         }
 

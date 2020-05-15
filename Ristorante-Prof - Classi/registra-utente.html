@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Nuovo Utente</title>
+</head>
+<body>
+    <h1>Form di Registrazione di un nuovo utente</h1>
+    <form action="registra-utente.php" method="POST">
+        <label>Cognome</label>
+        <input type="text" name="cognome" required>
+        <br>
+        <br>
+        <label>Nome</label>
+        <input type="text" name="nome" required>
+        <br>
+        <br>
+        <label>Indirizzo email</label>
+        <input type="email" name="email" required>
+        <br>
+        <br>
+        <label>Indirizzo</label>
+        <input type="text" name="Indirizzo" required>
+        <br>
+        <br>
+        <label>Numero Civico</label>
+        <input type="text" name="numeroCivico">
+        <br>
+        <br>
+        <label>CAP</label>
+        <input type="cap" name="cap" maxlength="5" minlength="5">
+        <br>
+        <br>
+        
+        <label>Città</label>
+        <input type="text" name="citta">
+        <br>
+        <br>
+        <label>Provincia</label>
+        <input type="text" name="provincia" maxlength="2" minlength="2" required>
+        <br>
+        <br>
+        <label>Username</label required>
+        <input type="text" name="username">
+        <br>
+        <br>
+        <label>Password</label required>
+        <input type="password" name="password" minlength="8">
+        <br>
+        <br>
+        <input type="submit" value="Registrati">
+        <input type="reset" value="Cancella">
+    </form>
+</body>
+</html>

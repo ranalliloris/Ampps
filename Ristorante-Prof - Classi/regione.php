@@ -26,11 +26,12 @@
         $dbconn->connect();
         try
         {
-            $condition=[
+           /* $condition=[
                             ':id'=> '1',
                             ':nomeVino' => 'Brunello di Montalcino'
                         ];
             $dbconn->delete('vino',$condition);
+            */ //CON QUESTO DA ERRORE
             
             $query="SELECT nomeVino, tipoVino, nome, cantina.provincia
                     FROM vino INNER JOIN cantina 
@@ -40,7 +41,8 @@
                     WHERE regione=:regione";
             $parameters =[':regione' => $_GET['regione']];        
             
-            $rows=$dbconn->query($query,$parameters);
+            $stmt=$dbconn->query($query,$parameters);
+            $rows=$stmt->fetchAll();
             if($rows==null)
             {
                 echo "<tr>

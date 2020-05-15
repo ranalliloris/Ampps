@@ -16,7 +16,7 @@
                             ':regione'=>$_POST["regione"]
                         ];
                 
-                $rows=$dbconn->insert($values,"province");
+                $stmt=$dbconn->insert($values,"province");
                 echo "<h1>Cliente Inserito con successo</h1>";
                 
             }

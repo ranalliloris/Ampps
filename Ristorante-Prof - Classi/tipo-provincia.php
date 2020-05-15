@@ -36,7 +36,8 @@
                             ":provincia"=>$_GET["provincia"]
             ];
             
-            $rows=$dbconn->query($query,$parameters);
+            $stmt=$dbconn->query($query,$parameters);
+            $rows=$stmt->fetchAll();
             if($rows==null)
             {
                 echo "<tr>

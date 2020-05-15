@@ -27,7 +27,7 @@
                             <select name="Regione">
                                 <?php 
                                     try {
-                                        $db = new PDO('mysql:host=localhost; dbname=RistoranteMarconi', 'DavideTarlini', 'diFzgWwDLJXZD3y2');
+                                        $db = new PDO('mysql:host=localhost; dbname=RistoranteMarconi', 'userdb', 'userdb');
                                     } catch (PDOException $e) {
                                         echo "Errore connessione DB: ".$e;
                                         die();

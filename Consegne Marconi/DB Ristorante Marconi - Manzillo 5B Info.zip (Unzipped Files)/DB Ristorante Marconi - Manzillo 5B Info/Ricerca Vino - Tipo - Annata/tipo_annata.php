@@ -33,7 +33,7 @@
             <?php 
                    try
                    {
-                       $db = new PDO("mysql:host=localhost;dbname= RistoranteMarconi"," mela","pollofritto9012");
+                       $db = new PDO("mysql:host=localhost;dbname=RistoranteMarconi","userdb","userdb");
                        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    }
                    catch(PDOException $e)

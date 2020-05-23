@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS UTENTE
     cognome VARCHAR(50) NOT NULL,
     nome VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
+    telefono VARCHAR(15),
     indirizzo VARCHAR(50) NOT NULL,
     numeroCivico VARCHAR(10),
     cap CHAR(5),
@@ -20,9 +21,8 @@ CREATE TABLE IF NOT EXISTS CARRELLO
     idCarrello INT NOT NULL AUTO_INCREMENT, 
     username VARCHAR(20) NOT NULL,
     idVino INT(11) NOT NULL,
-    ora TIME NOT NULL,
-    data DATE NOT NULL,
-    PRIMARY KEY(idCarrello),
+    qta INT(3) NOT NULL,
+    PRIMARY KEY(idCarrello,idVino),
     CONSTRAINT idVino FOREIGN KEY(idVino) REFERENCES VINO(idVino)
     ON UPDATE CASCADE
     ON DELETE CASCADE,

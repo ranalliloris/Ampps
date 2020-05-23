@@ -13,12 +13,12 @@
         
         try
         {
-            if($dbconn->userExists($_POST["username"]))
+            if($dbconn->userExists())
             {
                 echo "<h1>Registrazione non effettuata: Utente già registrato</h1>";
                 die();
             }
-            $dbconn->nuovoUtente($_POST);
+            $dbconn->nuovoUtente();
             echo "<h1> Registrazione utente avvenuta con successo</h1>";
         }
         catch(Exception $e)

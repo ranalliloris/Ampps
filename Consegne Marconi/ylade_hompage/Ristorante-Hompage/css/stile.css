@@ -1,0 +1,43 @@
+      body {
+        background-image: url("../img/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+
+      }
+
+      h1 {
+            font-size: 150px;
+            text-align: center;
+            color: #f5f5dd;
+            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-width: 3px;
+            }
+
+      .opzione1 {
+        border-radius: 25px;
+        background: url("../img/img1.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+      .opzione2 {
+        border-radius: 25px;
+        background: url("../img/img2.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+      .opzione3 {
+        border-radius: 25px;
+        background: url("../img/img3.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }

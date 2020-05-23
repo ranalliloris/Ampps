@@ -77,7 +77,6 @@ class dbConnect
         }
         //INSERT INTO (sigla,provincia,regione) VALUES(:sigla,:provincia,:regione,
         $query=rtrim($query,',').')';
-        echo $query;
         $stmt=$this->query($query,$values);
         return $stmt;
     }

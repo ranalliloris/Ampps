@@ -88,14 +88,14 @@
         }
 
 
-        public function userExists($username)
+        public function userExists()
         {
             $query="SELECT username
                     FROM utente
                     WHERE username=:username
                     ";
             $stmt=$this->db->prepare($query);
-            $parameters=[":username" => $username];
+            $parameters=[":username" => $_POST["username"]];
             if(!$stmt->execute($parameters))
             {
                 echo "Errore nell'esecuzione della query userExists ";
@@ -106,18 +106,42 @@
 
         }
 
-        public function nuovoUtente($post)
+        public function userVerify()
         {
-            $values=[       ":username" => $post["username"],
-                            ":password" => password_hash($post["username"],PASSWORD_DEFAULT),
-                            ":nome" => $post["nome"],
-                            ":cognome" => $post["cognome"],
-                            ":email" => $post["email"],
-                            ":indirizzo" => $post["indirizzo"],
-                            ":numeroCivico" => $post["numeroCivico"],
-                            ":cap" => $post["cap"],
-                            ":citta" => $post["citta"],
-                            ":provincia" => $post["provincia"]
+            $query="SELECT password
+                    FROM utente
+                    WHERE username=:username
+                    ";
+            $stmt=$this->db->prepare($query);
+            $parameters=[":username" => $_POST["username"]];
+            if(!$stmt->execute($parameters))
+            {
+                echo "Errore nell'esecuzione della query userVerify ";
+                print_r($stmt->errorInfo());
+                return null;
+            }
+            $row=$stmt->fetch();
+            $passwordDB=$row["password"];
+            if(password_verify($_POST["password"],$passwordDB))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public function nuovoUtente()
+        {
+            $values=[       ":username" => $_POST["username"],
+                            ":password" => password_hash($_POST["password"],PASSWORD_DEFAULT),
+                            ":nome" => $_POST["nome"],
+                            ":cognome" => $_POST["cognome"],
+                            ":email" => $_POST["email"],
+                            ":indirizzo" => $_POST["indirizzo"],
+                            ":numeroCivico" => $_POST["numeroCivico"],
+                            ":cap" => $_POST["cap"],
+                            ":citta" => $_POST["citta"],
+                            ":provincia" => $_POST["provincia"]
             ];
             return $this->insert('utente',$values);
         }

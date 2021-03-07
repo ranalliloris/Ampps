@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200&display=swap');
+body
+{
+     background:#e0e0e0;
+} 
+
+.container
+{
+    background:#ffffff;
+}
+
+#content
+{
+    width:60%;
+    margin: 0px auto 0px auto;
+    min-height: 280px;
+}
+
+#left-sidebar, #right-sidebar
+{
+    width:20%;
+    height:50%;
+}
+
+.req
+{
+    color:red;
+    font-size: 0.90rem;
+}
+
+.school-name
+{
+    font-family: 'Dosis', sans-serif;
+}
+
+.school-info
+{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .title-head
+    {
+        margin: 35px 0 35px 0px;
+        font-family: 'Dancing Script', cursive;
+        color:#022370;
+        font-size:2.0rem;
+    }
+    .text-resize
+    {
+        font-size:0.6rem;
+    }
+    #msgbenvenuto
+    {
+            font-family: 'Grandstander', cursive;
+            color:#000000;
+            font-size:0.8rem;
+            text-align: center;
+    }
+
+    #logo-duo
+    {
+        display:initial;
+    }
+    .school-name
+    {
+        /*font-size:2.0rem;*/
+        display:none;
+    }
+    .school-info
+    {
+        /*font-size:0.75rem;*/
+        display:none;
+    }
+    #logoScuola
+    {
+        display: none;
+    }
+    .footer
+    {
+        font-size:0.75rem
+    }
+}
+
+/*601-767*/
+@media screen and (min-width: 601px) {
+    #logo-duo
+    {
+        display:none;
+    }
+    .title-head
+    {
+        margin: 20px 0 20px 0px;
+        font-family: 'Dancing Script', cursive;
+        color:#022370;
+        font-size:2.0rem
+    }
+    #msgbenvenuto
+    {
+            font-family: 'Grandstander', cursive;
+            color:#000000;
+            font-size:1.0rem;
+            text-align: center;
+    }
+
+    .school-name
+    {
+        font-size:1.25rem;
+        line-height: 1.25rem;
+    }
+    .school-info
+    {
+        font-size:0.75rem
+    }
+
+    .footer
+    {
+        font-size:0.75rem
+    }
+}
+/*768-991*/
+@media screen and (min-width: 768px) {
+    #logo-duo
+    {
+        display:none;
+    }
+    .title-head
+    {
+        margin: 25px 0 25px 0px;
+        font-family: 'Dancing Script', cursive;
+        color:#022370;
+        font-size:2.0rem
+    }
+    #msgbenvenuto
+    {
+            font-family: 'Grandstander', cursive;
+            color:#000000;
+            font-size:1.0rem;
+            text-align: center;
+    }
+
+    .school-name
+    {
+        font-size:1.75rem !important;
+        line-height: 2.0rem;
+    }
+
+    .school-info
+    {
+        font-size:0.90rem;
+    }
+
+    .footer
+    {
+        font-size:1rem
+    }
+}
+/*Da 992 in su*/
+@media screen and (min-width: 992px) {
+    #logo-duo
+    {
+        display:none;
+    }
+    .title-head
+    {
+        margin: 25px 0 25px 0px;
+        font-family: 'Dancing Script', cursive;
+        color:#022370;
+        font-size:2.5rem
+    }
+    #msgbenvenuto
+    {
+            font-family: 'Grandstander', cursive;
+            color:#000000;
+            font-size:1.2rem;
+            text-align: center;
+    }
+
+    .school-name
+    {
+        font-size:2.5rem !important;
+        line-height: 3rem;
+    }
+
+    .school-info
+    {
+        font-size:1rem;
+    }
+
+    .footer
+    {
+        font-size:1rem
+    }
+}
+
+
+#img-header
+{
+padding:0 20% 0 20%;
+}
+
+.logo_scuola
+{
+width:10.5em;
+}
+.red-header-line
+{
+width:100%;
+background:#ab0b01;
+height:15px;
+}
+
+#error-cmdline
+{
+    margin:40px 0px 40px 0px;
+}
+
+.footer .list-group-item
+{
+    background-color:transparent;
+    border: transparent;
+}
+
+.footer
+{
+    /* background-color: #000b23cf !important; TROVARE IL MODO DI VISUALIZZARLO SU EDGE*/
+    background-color:#262f44;
+    color:white;
+}
+
+.footer a
+{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footer a:hover
+{
+    color: #f70f00;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap');
+body
+{
+     background:#e0e0e0;
+} 
+
+.container
+{
+    background:#ffffff;
+}
+
+#content
+{
+    width:60%;
+    margin: 0px auto 0px auto;
+    min-height: 280px;
+}
+
+#left-sidebar, #right-sidebar
+{
+    width:20%;
+    height:50%;
+}
+
+.req
+{
+    color:red;
+    font-size: 0.90rem;
+}
+
+@media screen and (min-width: 601px) {
+    .title-head
+    {
+        margin: 35px 0 35px 0px;
+        font-family: 'Dancing Script', cursive;
+        color:#022370;
+        font-size:2.5rem
+    }
+    #msgbenvenuto
+    {
+            font-family: 'Grandstander', cursive;
+            color:#000000;
+            font-size:1.2rem;
+            text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title-head
+    {
+        margin: 35px 0 35px 0px;
+        font-family: 'Dancing Script', cursive;
+        color:#022370;
+        font-size:2.0rem;
+    }
+    .text-resize
+    {
+        font-size:0.6rem;
+    }
+    #msgbenvenuto
+    {
+            font-family: 'Grandstander', cursive;
+            color:#000000;
+            font-size:0.8rem;
+            text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) 
+{
+    .school-name
+    {
+        /*font-size:2.0rem;*/
+        display:none;
+    }
+    .school-info
+    {
+        font-size:0.75rem;
+        
+    }
+    .logo_scuola
+    {
+        float: none !important;
+        margin: 0px auto 0px auto;
+    }
+    .footer
+    {
+        font-size:0.75rem
+    }
+}
+
+@media screen and (min-width: 601px) 
+{
+    .school-name
+    {
+        font-size:2.5rem
+    }
+    .school-info
+    {
+        font-size:1.0rem
+    }
+}
+
+#img-header
+{
+padding:0 20% 0 20%;
+}
+
+.logo_scuola
+{
+width:10.5em;
+}
+.red-header-line
+{
+width:100%;
+background:#ab0b01;
+height:15px;
+}
+
+#error-cmdline
+{
+    margin:40px 0px 40px 0px;
+}
+
+.footer .list-group-item
+{
+    background-color:transparent;
+    border: transparent;
+}
+
+.footer
+{
+    /* background-color: #000b23cf !important; TROVARE IL MODO DI VISUALIZZARLO SU EDGE*/
+    background-color:#262f44;
+    color:white;
+}
+
+.footer a
+{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footer a:hover
+{
+    color: #f70f00;
+    text-decoration: underline;
+}
+
